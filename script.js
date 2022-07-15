@@ -28,3 +28,34 @@ numberButtons.forEach((button) => {
     screen.textContent += button.textContent;
   });
 });
+
+let operatorButtons = document.querySelectorAll(".operator");
+let val1;
+let operator;
+
+operatorButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    val1 = +screen.textContent;
+    operator = symbolToOperator(button.textContent);
+    screen.textContent = "";
+  });
+});
+
+document.getElementById("equals").addEventListener("click", () => {
+  if (screen.textContent != null) {
+    screen.textContent = operate(operator, val1, +screen.textContent);
+  }
+});
+
+function symbolToOperator(symbol) {
+  switch (symbol) {
+    case "+":
+      return add;
+    case "-":
+      return subtract;
+    case "x":
+      return multiply;
+    case "/":
+      return divide;
+  }
+}
