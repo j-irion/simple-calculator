@@ -20,6 +20,10 @@ function operate(operator, val1, val2) {
   return operator(val1, val2);
 }
 
+function modulo(val1, val2) {
+  return val1 % val2;
+}
+
 let numberButtons = document.querySelectorAll(".number");
 
 numberButtons.forEach((button) => {
@@ -57,5 +61,7 @@ function symbolToOperator(symbol) {
       return multiply;
     case "/":
       return divide;
+    case "%":
+      return modulo;
   }
 }
