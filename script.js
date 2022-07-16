@@ -69,3 +69,7 @@ function symbolToOperator(symbol) {
 document.getElementById("clear").addEventListener("click", () => {
   screen.textContent = "";
 });
+
+document.getElementById("inverter").addEventListener("click", () => {
+  screen.textContent = multiply(+screen.textContent, -1);
+});
