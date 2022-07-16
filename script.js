@@ -65,3 +65,7 @@ function symbolToOperator(symbol) {
       return modulo;
   }
 }
+
+document.getElementById("clear").addEventListener("click", () => {
+  screen.textContent = "";
+});
