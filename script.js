@@ -36,18 +36,25 @@ numberButtons.forEach((button) => {
 let operatorButtons = document.querySelectorAll(".operator");
 let val1;
 let operator;
+let operationGoingOn = false;
 
 operatorButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    val1 = +screen.textContent;
+    if (operationGoingOn) {
+      val1 = operate(operator, val1, +screen.textContent);
+    } else {
+      val1 = +screen.textContent;
+    }
     operator = symbolToOperator(button.textContent);
     screen.textContent = "";
+    operationGoingOn = true;
   });
 });
 
 document.getElementById("equals").addEventListener("click", () => {
   if (screen.textContent != null) {
     screen.textContent = operate(operator, val1, +screen.textContent);
+    operationGoingOn = false;
   }
 });
 
