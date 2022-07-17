@@ -6,7 +6,11 @@ body {
 }
 
 .calculator {
-    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 1;
+    height: auto;
+    width: 430px;
 }
 
 #screen {
