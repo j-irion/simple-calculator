@@ -100,3 +100,8 @@ document.getElementById("dot").addEventListener("click", () => {
   screen.textContent += ".";
   equated = false;
 });
+
+document.getElementById("backspace").addEventListener("click", () => {
+  if (screen.textContent.length <= 1) screen.textContent = "0";
+  else screen.textContent = screen.textContent.toString().slice(0, -1);
+});
