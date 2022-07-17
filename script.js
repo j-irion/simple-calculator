@@ -102,8 +102,10 @@ document.getElementById("dot .").addEventListener("click", () => {
 });
 
 document.getElementById("Backspace").addEventListener("click", () => {
-  if (screen.textContent.length <= 1) screen.textContent = "0";
-  else screen.textContent = screen.textContent.toString().slice(0, -1);
+  if (screen.textContent.length <= 1) {
+    screen.textContent = "0";
+    equated = true;
+  } else screen.textContent = screen.textContent.toString().slice(0, -1);
 });
 
 document.addEventListener("keypress", (event) => {
