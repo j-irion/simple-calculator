@@ -105,3 +105,23 @@ document.getElementById("Backspace").addEventListener("click", () => {
   if (screen.textContent.length <= 1) screen.textContent = "0";
   else screen.textContent = screen.textContent.toString().slice(0, -1);
 });
+
+document.addEventListener("keypress", (event) => {
+  event.preventDefault();
+  let id = event.key;
+  console.log(id);
+  switch (event.key) {
+    case "c":
+      id = "clear c";
+      break;
+    case ".":
+      id = "dot .";
+      break;
+    case "=":
+      id = "equals =";
+      break;
+    case "Enter":
+      id = "equals =";
+  }
+  document.getElementById(id).click();
+});
