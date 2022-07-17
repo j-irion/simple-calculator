@@ -48,7 +48,7 @@ operatorButtons.forEach((button) => {
       val1 = +screen.textContent;
     }
     operator = symbolToOperator(button.textContent);
-    screen.textContent = "";
+    equated = true;
     operationGoingOn = true;
   });
 });
