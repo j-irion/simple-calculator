@@ -26,7 +26,10 @@ body {
 }
 
 #buttons {
-    border: solid 1px black;
+    display: flex;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 button {
