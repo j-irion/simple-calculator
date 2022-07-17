@@ -1,0 +1,15 @@
+.calculator {
+    border: solid 1px black;
+}
+
+#screen {
+    border: solid 1px black;
+}
+
+#buttons {
+    border: solid 1px black;
+}
+
+button {
+    border: solid 1px black;
+}
