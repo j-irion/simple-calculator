@@ -54,7 +54,7 @@ operatorButtons.forEach((button) => {
 });
 
 document.getElementById("equals").addEventListener("click", () => {
-  if (screen.textContent != null && operator != null) {
+  if (screen.textContent.length >= 1 && operator != null) {
     console.log("test");
     screen.textContent = round(operate(operator, val1, +screen.textContent), 5);
     operationGoingOn = false;
