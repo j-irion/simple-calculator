@@ -42,3 +42,7 @@ button {
     font-family: Helvetica, sans-serif;
     font-weight: 400;
 }
+
+#x {
+    rotate: 45deg;
+}
