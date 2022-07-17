@@ -53,7 +53,7 @@ operatorButtons.forEach((button) => {
   });
 });
 
-document.getElementById("equals =").addEventListener("click", () => {
+document.getElementById("equals").addEventListener("click", () => {
   if (operator == divide && +screen.textContent == 0)
     screen.textContent = "ERROR";
   else if (screen.textContent.length >= 1 && operator != null) {
@@ -79,7 +79,7 @@ function symbolToOperator(symbol) {
   }
 }
 
-document.getElementById("clear c").addEventListener("click", () => {
+document.getElementById("clear").addEventListener("click", () => {
   screen.textContent = "0";
   operationGoingOn = false;
   equated = true;
@@ -94,7 +94,7 @@ function round(value, decimals) {
   return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
 }
 
-document.getElementById("dot .").addEventListener("click", () => {
+document.getElementById("dot").addEventListener("click", () => {
   if (equated) screen.textContent = "0";
   if (screen.textContent.includes(".")) return;
   screen.textContent += ".";
@@ -114,16 +114,16 @@ document.addEventListener("keypress", (event) => {
   console.log(id);
   switch (event.key) {
     case "c":
-      id = "clear c";
+      id = "clear";
       break;
     case ".":
-      id = "dot .";
+      id = "dot";
       break;
     case "=":
-      id = "equals =";
+      id = "equals";
       break;
     case "Enter":
-      id = "equals =";
+      id = "equals";
   }
   document.getElementById(id).click();
 });
