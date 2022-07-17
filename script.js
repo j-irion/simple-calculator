@@ -78,9 +78,10 @@ function symbolToOperator(symbol) {
 }
 
 document.getElementById("clear").addEventListener("click", () => {
-  screen.textContent = "";
+  screen.textContent = "0";
   operationGoingOn = false;
   equated = true;
+  val1 = null;
 });
 
 document.getElementById("inverter").addEventListener("click", () => {
