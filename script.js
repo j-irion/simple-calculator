@@ -28,8 +28,9 @@ let numberButtons = document.querySelectorAll(".number");
 
 numberButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    if (screen.textContent == 0) screen.textContent = "";
+    if (equated) screen.textContent = "";
     screen.textContent += button.textContent;
+    equated = false;
   });
 });
 
@@ -37,6 +38,7 @@ let operatorButtons = document.querySelectorAll(".operator");
 let val1;
 let operator;
 let operationGoingOn = false;
+let equated = true;
 
 operatorButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -53,8 +55,9 @@ operatorButtons.forEach((button) => {
 
 document.getElementById("equals").addEventListener("click", () => {
   if (screen.textContent != null) {
-    screen.textContent = operate(operator, val1, +screen.textContent);
+    screen.textContent = round(operate(operator, val1, +screen.textContent), 5);
     operationGoingOn = false;
+    equated = true;
   }
 });
 
@@ -75,8 +78,14 @@ function symbolToOperator(symbol) {
 
 document.getElementById("clear").addEventListener("click", () => {
   screen.textContent = "";
+  operationGoingOn = false;
+  equated = true;
 });
 
 document.getElementById("inverter").addEventListener("click", () => {
   screen.textContent = multiply(+screen.textContent, -1);
 });
+
+function round(value, decimals) {
+  return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
+}
