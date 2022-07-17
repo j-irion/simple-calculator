@@ -93,3 +93,10 @@ document.getElementById("inverter").addEventListener("click", () => {
 function round(value, decimals) {
   return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
 }
+
+document.getElementById("dot").addEventListener("click", () => {
+  if (equated) screen.textContent = "0";
+  if (screen.textContent.includes(".")) return;
+  screen.textContent += ".";
+  equated = false;
+});
