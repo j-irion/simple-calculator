@@ -46,3 +46,21 @@ button {
 #x {
     rotate: 45deg;
 }
+
+.number,
+#dot,
+#Backspace {
+    background-color: rgba(128, 128, 128, 0.518);
+}
+
+.operator,
+#equals {
+    background-color: orange;
+}
+
+#clear,
+#inverter,
+#modulo {
+    background-color: rgba(205, 202, 202, 0.877);
+    color: black;
+}
