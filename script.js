@@ -53,7 +53,7 @@ operatorButtons.forEach((button) => {
   });
 });
 
-document.getElementById("equals").addEventListener("click", () => {
+document.getElementById("equals =").addEventListener("click", () => {
   if (operator == divide && +screen.textContent == 0)
     screen.textContent = "ERROR";
   else if (screen.textContent.length >= 1 && operator != null) {
@@ -79,7 +79,7 @@ function symbolToOperator(symbol) {
   }
 }
 
-document.getElementById("clear").addEventListener("click", () => {
+document.getElementById("clear c").addEventListener("click", () => {
   screen.textContent = "0";
   operationGoingOn = false;
   equated = true;
@@ -94,14 +94,14 @@ function round(value, decimals) {
   return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
 }
 
-document.getElementById("dot").addEventListener("click", () => {
+document.getElementById("dot .").addEventListener("click", () => {
   if (equated) screen.textContent = "0";
   if (screen.textContent.includes(".")) return;
   screen.textContent += ".";
   equated = false;
 });
 
-document.getElementById("backspace").addEventListener("click", () => {
+document.getElementById("Backspace").addEventListener("click", () => {
   if (screen.textContent.length <= 1) screen.textContent = "0";
   else screen.textContent = screen.textContent.toString().slice(0, -1);
 });
