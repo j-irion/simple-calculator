@@ -14,7 +14,15 @@ body {
 }
 
 #screen {
-    border: solid 1px black;
+    display: flex;
+    height: 100px;
+    font-size: 100px;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    padding-right: 25px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
 }
 
 #buttons {
